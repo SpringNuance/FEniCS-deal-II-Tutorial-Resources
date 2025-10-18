@@ -1,0 +1,16 @@
+# choose your permanent container home (non-purged)
+$ SIF_DIR=/projappl/project_2008630/containers
+$ mkdir -p "$SIF_DIR" && cd "$SIF_DIR"
+
+# pull official FEniCSx (DOLFINx) image
+apptainer pull dolfinx.sif docker://dolfinx/dolfinx:stable
+
+After that, go out to the login node base, and run this smoke test (right now, from login node)
+$ SIF=/projappl/project_2008630/containers/dolfinx.sif
+$ apptainer exec "$SIF" python - << 'PY'
+$ import dolfinx, ufl
+$ print("dolfinx:", dolfinx.__version__)
+$ PY
+
+it should print
+dolfinx: 0.9.0
