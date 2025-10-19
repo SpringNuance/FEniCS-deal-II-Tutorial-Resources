@@ -1,0 +1,9 @@
+# choose your permanent container home (non-purged)
+$ SIF_DIR=/projappl/project_2008630/containers
+$ mkdir -p "$SIF_DIR" && cd "$SIF_DIR"
+
+# pull official FEniCSx (DOLFINx) image
+$ apptainer pull dealii.sif docker://dealii/dealii:v9.7.1-noble
+
+After that, go out to the login node base, and run this smoke test (right now, from login node)
+$ SIF=/projappl/project_2008630/containers/dealii.sif

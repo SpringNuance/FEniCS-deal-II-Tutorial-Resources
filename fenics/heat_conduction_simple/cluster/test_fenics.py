@@ -2,12 +2,12 @@
 # u_t - u_xx = f,  u(0,x)=sin(pi x), f=0
 # Exports a PNG with curves at t = 0, dt, 2dt, ...
 
-import sys, os
-sys.path.insert(0, os.path.join(os.getcwd(), ".pydeps"))  # <-- use your local deps without touching container PYTHONPATH
-
 # Implicit Euler solution of 1D heat equation on [0,1] with u=0 at x=0,1
 # u_t - u_xx = f,  u(0,x)=sin(pi x), f=0
 # Exports a PNG with curves at t = 0, dt, 2dt, ...
+
+import sys, os
+sys.path.insert(0, os.path.join(os.getcwd(), ".pydeps"))  # <-- use your local deps without touching container PYTHONPATH
 
 import numpy as np
 import matplotlib

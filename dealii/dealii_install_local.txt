@@ -1,0 +1,10 @@
+# Inside your WSL Ubuntu
+sudo -i
+export REPO=ppa:ginggs/deal.ii-9.6.0-backports
+apt-get update && apt-get install -y software-properties-common
+add-apt-repository $REPO
+apt-get update
+apt-get install -y libdeal.ii-dev
+apt-get install -y build-essential cmake ninja-build gdb git-core
+# (optional docs + examples)
+apt-get install -y libdeal.ii-doc
